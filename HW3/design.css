@@ -1,0 +1,10 @@
+﻿body {
+    background-color:aqua;
+}
+
+.title{
+    font-size:large;
+    font-family:'Times New Roman';
+    font-weight:600;
+    color:blue;
+}
