@@ -47,6 +47,10 @@
             color:red;
             margin-top:10px;
         }
+        .confirm_{
+            color:green;
+            margin-top:10px;
+        }
     </style>
 </head>
 <body>
@@ -64,6 +68,7 @@
             <asp:Label CssClass="label" ID="description" runat="server"></asp:Label>
             <asp:Label CssClass="label" ID="price" runat="server"></asp:Label>
             <asp:Button ID="return" CssClass="main_page" runat="server" Text="Return to Main Page" OnClick="return_Click" />
+            <asp:Button ID="confirm" CssClass="confirm_" runat="server" Text="Confirm" OnClick="confirm_Click" />
         </div>
     </form>
 </body>

@@ -24,13 +24,13 @@ namespace Web_Midterm
         protected global::System.Web.UI.WebControls.TextBox first_name;
 
         /// <summary>
-        /// last_name control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox last_name;
+        protected global::System.Web.UI.WebControls.TextBox password;
 
         /// <summary>
         /// login_button control.

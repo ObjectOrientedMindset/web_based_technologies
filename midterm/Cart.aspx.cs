@@ -12,21 +12,25 @@ namespace Web_Midterm
 {
     public partial class Cart : System.Web.UI.Page
     {
-        ArrayList added_cars;
+        private ArrayList added_cars;
+        private List<Product> products;
+        private int total_price;
+        private OleDbConnection connection;
+        private bool match;
         protected void Page_Load(object sender, EventArgs e)
         {
             //default pageden cart listesini al.
             added_cars = new ArrayList();
             added_cars = (ArrayList)Session["added_cars"];
             //database ile bağlantı kuruldu
-            OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "web_midterm_data.accdb");
+            connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "web_midterm_data.accdb");
             //select * bütün tabloyu seçti
             connection.Open();
             OleDbDataReader reader = null;
             OleDbCommand command = new OleDbCommand("SELECT * from Product", connection);
             reader = command.ExecuteReader();
             //product tablosunun bütün satırlarını okuyup list container'ına saklar
-            List<Product> products = new List<Product>();
+            products = new List<Product>();
             while (reader.Read())
             {
                 products.Add(new Product(reader[0].ToString(), reader[1].ToString(), reader[2].ToString(),
@@ -35,8 +39,8 @@ namespace Web_Midterm
             }
             //Sessiondan gelen araba listesini bütün ürünlerin idleriyle karşılaştır
             //Eşleşme bulununca bilgileri update eder.
-            int total_price = 0;
-            bool match = false;
+            
+            match = false;
             List<Image> cars = new List<Image>();
             if (added_cars != null)
             {
@@ -71,6 +75,21 @@ namespace Web_Midterm
         {
             Session["added_cars"] = added_cars;
             Response.Redirect("Default.aspx");
+        }
+
+        protected void confirm_Click(object sender, EventArgs e)
+        {
+            //Session["customer_id"]
+            if(match)
+            {
+                // insert into Orders table
+                connection.Open();
+                string sql = "INSERT INTO Orders (OrderTotalPrice, CustomerID)VALUES('" + total_price + "','" + (int)Session["customer_id"] + "')";
+                OleDbCommand cmd = new OleDbCommand(sql, connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                Response.Redirect("Default.aspx");
+            }
         }
     }
 }

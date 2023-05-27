@@ -16,7 +16,7 @@ namespace Web_Midterm
         protected void Page_Load(object sender, EventArgs e)
         {   //database ile bağlantı kuruldu
             OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "web_midterm_data.accdb");
-            //select * bütün tabloyu seçti
+            //select * bütün tabloyu sorgular
             connection.Open();
             OleDbDataReader reader = null;
             OleDbCommand command = new OleDbCommand("SELECT * from Product", connection);
@@ -58,10 +58,9 @@ namespace Web_Midterm
             connection.Close();
 
             //Loginden gelen bilgileri kullanarak texti günceller
-            if (Session["first_name"] != null && Session["last_name"] != null)
+            if (Session["first_name"] != null)
             {
-                user_name.Text = "Welcome " + Session["first_name"].ToString()
-                    + " " + Session["last_name"].ToString();
+                user_name.Text = "Welcome " + Session["first_name"].ToString();
             }
 
         }

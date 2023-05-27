@@ -88,8 +88,8 @@ input{
 
         <label for="username">First Name</label>
         <asp:TextBox placeholder="Mithat" id="first_name" runat="server"/>
-        <label for="password">Last Name</label>
-        <asp:TextBox placeholder="Uçar" id="last_name" runat="server"/>
+        <label for="password">Password</label>
+        <asp:TextBox placeholder="123" id="password" runat="server"/>
         <asp:Button ID="login_button" CssClass="button" runat="server" Text="Login" OnClick="login_button_Click"/> 
         <asp:Label CssClass="warning" ID="warning_text" runat="server"></asp:Label>
     </form>
