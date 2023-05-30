@@ -1,0 +1,75 @@
+[
+  {
+    "ÖğrenciID": "3",
+    "Ad": "Ali",
+    "SoyAd": "Veli",
+    "Yaş": "21",
+    "Cinsiyet": "E",
+    "Maaş": "18",
+    "DoğumGünü": "1989-03-19 00:00:00"
+  },
+  {
+    "ÖğrenciID": "4",
+    "Ad": "Metin",
+    "SoyAd": "Demir",
+    "Yaş": "22",
+    "Cinsiyet": "E",
+    "Maaş": "50",
+    "DoğumGünü": "1988-04-19 00:00:00"
+  },
+  {
+    "ÖğrenciID": "5",
+    "Ad": "Ayşe",
+    "SoyAd": "Boz",
+    "Yaş": "23",
+    "Cinsiyet": "K",
+    "Maaş": "100",
+    "DoğumGünü": "1987-04-30 00:00:00"
+  },
+  {
+    "ÖğrenciID": "6",
+    "Ad": "Emre",
+    "SoyAd": "Ak",
+    "Yaş": "23",
+    "Cinsiyet": "E",
+    "Maaş": "55",
+    "DoğumGünü": "1987-10-24 00:00:00"
+  },
+  {
+    "ÖğrenciID": "7",
+    "Ad": "Gülşah",
+    "SoyAd": "Sevim",
+    "Yaş": "22",
+    "Cinsiyet": "K",
+    "Maaş": "50",
+    "DoğumGünü": "2010-04-14 00:00:00"
+  },
+  {
+    "ÖğrenciID": "10",
+    "Ad": "şahin",
+    "SoyAd": "Işık",
+    "Yaş": "22",
+    "Cinsiyet": "E",
+    "Maaş": "1000",
+    "DoğumGünü": "1988-04-29 00:00:00"
+  },
+  {
+    "ÖğrenciID": "11",
+    "Ad": "Hasan",
+    "SoyAd": "Özer",
+    "Yaş": "19",
+    "Cinsiyet": "E",
+    "Maaş": "650",
+    "DoğumGünü": "1988-01-08 00:00:00"
+  },
+  {
+    "ÖğrenciID": "12",
+    "Ad": "Şafak",
+    "SoyAd": "Şafak",
+    "Yaş": "20",
+    "Cinsiyet": "E",
+    "Maaş": "5000",
+    "DoğumGünü": "1995-05-26 00:00:00"
+  }
+
+]
